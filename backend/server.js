@@ -19,7 +19,7 @@ const leaderboardRoutes = require('./routes/leaderboard.routes');
 // Connect to database and fix Activity index
 (async () => {
   await connectDB();
-  
+
   // Fix Activity collection unique index issue
   // This allows multiple activities per day for the same user
   try {
@@ -35,7 +35,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  origin: process.env.CORS_ORIGIN || 'https://health-and-fitness-tracking-with-xhcx.onrender.com',
   credentials: true,
 }));
 
