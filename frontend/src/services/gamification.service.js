@@ -6,25 +6,25 @@ import api from './api';
 export const gamificationService = {
   // Get points and level
   getPoints: async () => {
-    const response = await api.get('/gamification/points');
+    const response = await api.get('/api/gamification/points');
     return response.data;
   },
 
   // Get user's badges
   getBadges: async () => {
-    const response = await api.get('/gamification/badges');
+    const response = await api.get('/api/gamification/badges');
     return response.data;
   },
 
   // Get all available badges
   getAvailableBadges: async () => {
-    const response = await api.get('/gamification/available-badges');
+    const response = await api.get('/api/gamification/available-badges');
     return response.data;
   },
 
   // Get level information
   getLevel: async () => {
-    const response = await api.get('/gamification/level');
+    const response = await api.get('/api/gamification/level');
     return response.data;
   },
 };

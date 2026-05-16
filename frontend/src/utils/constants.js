@@ -27,4 +27,4 @@ export const POINTS_RULES = {
 // Use relative path to leverage Vite proxy for proper cookie handling
 // In development, Vite proxy handles /api requests
 // In production, use full URL from environment variable
-export const API_BASE_URL = 'https://health-and-fitness-tracking-with.onrender.com/api' || '/api';
+export const API_BASE_URL = 'https://health-and-fitness-tracking-with.onrender.com' || '/api';

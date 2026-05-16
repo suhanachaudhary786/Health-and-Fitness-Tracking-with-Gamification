@@ -6,7 +6,7 @@ import api from './api';
 export const leaderboardService = {
   // Get overall leaderboard
   getOverall: async (limit = 10) => {
-    const response = await api.get('/leaderboard/overall', {
+    const response = await api.get('/api/leaderboard/overall', {
       params: { limit },
     });
     return response.data;
@@ -14,7 +14,7 @@ export const leaderboardService = {
 
   // Get weekly leaderboard
   getWeekly: async (category = 'points', limit = 10) => {
-    const response = await api.get('/leaderboard/weekly', {
+    const response = await api.get('/api/leaderboard/weekly', {
       params: { category, limit },
     });
     return response.data;
@@ -22,7 +22,7 @@ export const leaderboardService = {
 
   // Get monthly leaderboard
   getMonthly: async (category = 'points', limit = 10) => {
-    const response = await api.get('/leaderboard/monthly', {
+    const response = await api.get('/api/leaderboard/monthly', {
       params: { category, limit },
     });
     return response.data;
@@ -30,7 +30,7 @@ export const leaderboardService = {
 
   // Get user's rank
   getMyRank: async (type = 'overall', category = 'points') => {
-    const response = await api.get('/leaderboard/my-rank', {
+    const response = await api.get('/api/leaderboard/my-rank', {
       params: { type, category },
     });
     return response.data;

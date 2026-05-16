@@ -6,19 +6,19 @@ import api from './api';
 export const userService = {
   // Get user profile
   getProfile: async () => {
-    const response = await api.get('/users/profile');
+    const response = await api.get('/api/users/profile');
     return response.data;
   },
 
   // Update user profile
   updateProfile: async (profileData) => {
-    const response = await api.put('/users/profile', profileData);
+    const response = await api.put('/api/users/profile', profileData);
     return response.data;
   },
 
   // Get user statistics
   getStats: async () => {
-    const response = await api.get('/users/stats');
+    const response = await api.get('/api/users/stats');
     return response.data;
   },
 };
