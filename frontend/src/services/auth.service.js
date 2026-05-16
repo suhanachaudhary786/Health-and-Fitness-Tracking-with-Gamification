@@ -14,11 +14,13 @@ export const authService = {
   login: async (email, password) => {
     const response = await api.post('/api/auth/login', { email, password });
     console.log("login...", response.data);
+    localStorage.setItem("token", response.data.token);
     return response.data;
   },
 
   // Logout user
   logout: async () => {
+    localStorage.removeItem("token");
     const response = await api.post('/api/auth/logout');
     return response.data;
   },
