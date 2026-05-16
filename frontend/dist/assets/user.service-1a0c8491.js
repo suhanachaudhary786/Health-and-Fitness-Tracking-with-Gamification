@@ -1,0 +1,1 @@
+import{b as s}from"./index-0c356672.js";const a={getProfile:async()=>(await s.get("/users/profile")).data,updateProfile:async e=>(await s.put("/users/profile",e)).data,getStats:async()=>(await s.get("/users/stats")).data};export{a as u};
