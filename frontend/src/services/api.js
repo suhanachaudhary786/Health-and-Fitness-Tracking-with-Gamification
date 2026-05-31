@@ -1,4 +1,4 @@
-// Axios instance and API configuration
+
 import axios from 'axios';
 import { API_BASE_URL } from '../utils/constants';
 
@@ -33,7 +33,7 @@ api.interceptors.response.use(
     // But don't redirect for /auth/me requests (used to check auth status)
     if (error.response?.status === 401) {
       const isAuthCheck = originalRequest.url?.includes('/auth/me');
-      
+
       // Only redirect if not checking auth status and not already on login page
       if (!isAuthCheck && window.location.pathname !== '/login') {
         window.location.href = '/login';
@@ -58,7 +58,7 @@ api.interceptors.response.use(
 
       // Exponential backoff: 1s, 2s, 4s
       const delay = Math.pow(2, retryCount) * 1000;
-      
+
       // Log retry attempt (only in development)
       if (process.env.NODE_ENV === 'development') {
         console.log(
@@ -80,7 +80,7 @@ api.interceptors.response.use(
       const errorMessage = isNetworkError
         ? 'Network error. Please check your connection and try again.'
         : 'Server error. Please try again later.';
-      
+
       // You can dispatch a toast notification here if needed
       console.error('Request failed after retries:', errorMessage);
     }

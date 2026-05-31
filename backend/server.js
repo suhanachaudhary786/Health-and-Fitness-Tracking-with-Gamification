@@ -35,7 +35,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'https://health-and-fitness-tracking-with-xhcx.onrender.com',
+  origin: process.env.CORS_ORIGIN,
   credentials: true,
 }));
 
